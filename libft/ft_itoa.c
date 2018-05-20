@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberedda <mberedda@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mberedda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 17:10:47 by mberedda          #+#    #+#             */
-/*   Updated: 2016/01/14 17:54:39 by mberedda         ###   ########.fr       */
+/*   Updated: 2015/12/07 20:58:47 by mberedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int		ft_intlength(int n)
 {

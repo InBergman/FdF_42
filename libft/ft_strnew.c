@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int_table.c                               :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberedda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/11 11:10:20 by mberedda          #+#    #+#             */
-/*   Updated: 2016/03/17 16:25:05 by mberedda         ###   ########.fr       */
+/*   Created: 2015/12/04 17:39:12 by mberedda          #+#    #+#             */
+/*   Updated: 2015/12/04 17:39:16 by mberedda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void				ft_print_int_table(int *tab, unsigned int size)
+char			*ft_strnew(size_t size)
 {
-	unsigned int	i;
+	char		*str;
+	size_t		i;
 
+	str = NULL;
 	i = 0;
-	while (i < size)
+	str = malloc((size + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (i <= size)
 	{
-		ft_putnbr(tab[i]);
+		str[i] = '\0';
 		i++;
 	}
+	return (str);
 }
